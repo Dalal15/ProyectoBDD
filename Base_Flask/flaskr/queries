@@ -1,25 +1,25 @@
 [
   {
     "name": "consulta 1",
-    "database": "dbName",
+    "database": "mongo",
     "description": "primera consulta",
-    "query": "MyCollection.find({'fecha':'201-10-24'},{ 'ciudad':1 , 'contenido':1,'fecha':1,'numero':1})"
+    "query": "myCollection.find({'fecha':'2016-10-24'},{ 'ciudad':1 , 'contenido':1,'fecha':1,'numero':1})"
 
 
   },
   {
     "name": "consulta 2",
-    "database": "dbName",
+    "database": "mongo",
     "description": "segunda consulta",
-    "query": "MyCollection.find(entidades.find({'numero':'39888642'},{'ciudad':1 , 'contenido':1,'fecha':1,'numero':1}).limit(100).sort('fecha',-1))"
+    "query": "myCollection.find({'numero':'39888642'},{'ciudad':1 , 'contenido':1,'fecha':1,'numero':1}).limit(100).sort('fecha',-1)"
 
 
   },
    {
     "name": "consulta 3",
-    "database": "dbName",
+    "database": "mongo",
     "description": "tercera consulta",
-    "query": "MyCollection.find(entidades.find({'$text': {'$search': 'Hola'}},{'ciudad':1 , 'contenido':1,'fecha':1,'numero':1}).limit(10).sort('fecha',-1))"
+    "query": "myCollection.find({'contenido':{'$regex': 'ilegal'}},{'ciudad':1 , 'contenido':1,'fecha':1,'numero':1}).limit(10).sort('fecha',-1)"
 
     
   }
